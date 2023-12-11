@@ -10,8 +10,8 @@
             for (int i = 0; i < lines.Length; i++)
             {
                 var gameTotal = 0;
-                var winningNumbers = new List<int>(); // 41 48 83 86 17
-                var numbersToCheck = new List<int>(); // 83 86  6 31 17  9 48 53
+                var winningNumbers = new List<int>();
+                var numbersToCheck = new List<int>();
 
                 var game = lines[i].Split(':')[1].Replace("  ", " ");
                 var winningNumbersString = game.Split(" | ")[0];
@@ -62,11 +62,10 @@
                     }
                 }
 
-                Console.WriteLine($"Game Total = {gameTotal}");
                 total += gameTotal;
             }
 
-            Console.WriteLine($"Ultra Total = {total}");
+            Console.WriteLine($"Total = {total}");
         }
 
         static string[] GetStrings()
